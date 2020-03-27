@@ -12,6 +12,13 @@ app.get('/contacto', function (request, response) {
   response.send('página de contacto');
 });
 
+app.get('/sobre-nosotros', function (req, res) {
+  res.send('Texto bien chévere sobre esta empresa.');
+});
+
 app.listen(3000, function () {
   console.log('servidor iniciado en puerto 3000');
 });
+
+// npm = node package manager
+// npx = node package executer
