@@ -2,4 +2,12 @@ p {
   color: lightgray;
   font-size: 30px;
 }
+
+.product__header {
+  background-color: lightblue;
+}
+
+.product__description {
+  font-size: 20px;
+}
 /*# sourceMappingURL=main.css.map */

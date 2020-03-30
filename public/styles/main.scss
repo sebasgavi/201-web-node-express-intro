@@ -2,3 +2,13 @@ p {
   color: lightgray;
   font-size: 30px;
 }
+
+.product{
+  &__header{
+    background-color: lightblue;
+  }
+
+  &__description{
+    font-size: 20px;
+  }
+}
