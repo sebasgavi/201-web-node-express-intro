@@ -19,7 +19,6 @@ const products = [
       }
     ],
     price: 100000,
-    freeShipping: true,
   },
   {
     id: 1,
@@ -28,7 +27,6 @@ const products = [
     description: 'una camiseta',
     options: [],
     price: 50000,
-    freeShipping: false,
   },
   {
     id: 2,
@@ -38,7 +36,6 @@ const products = [
     options: [],
     variations: [],
     price: 160000,
-    freeShipping: true,
   },
 ];
 

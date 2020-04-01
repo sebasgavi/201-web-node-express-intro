@@ -8,6 +8,15 @@ const exphbs = require('express-handlebars');
 // importar productos
 const products = require('./products');
 
+// recorrer productos para agregar freeShipping
+products.forEach(function (elem) {
+  if(elem.price >= 80000){
+    elem.freeShipping = true;
+  } else {
+    elem.freeShipping = false;
+  }
+})
+
 // instanciar servidor de express
 const app = express();
 
