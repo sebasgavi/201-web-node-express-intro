@@ -5,6 +5,9 @@ const path = require('path');
 // importart express-handlebars
 const exphbs = require('express-handlebars');
 
+// importar productos
+const products = require('./products');
+
 // instanciar servidor de express
 const app = express();
 
@@ -45,43 +48,18 @@ app.get('/tienda', function (req, res) {
 });
 
 // ruta para la lista de productos con handlebars
-app.get('/producto/:name', function (req, res) {
+app.get('/producto/:name/:id', function (req, res) {
   var context = {};
 
-  if(req.params.name == 'pantalon'){
-    context = {
-      title: 'Pantalón',
-      img: '/images/pantalon.jpg',
-      description: 'un pantalón bien chimbita',
-      options: [ 'azul', 'verde', 'blanco' ],
-      variations: [
-        {
-          name: 'Simple',
-        },
-        {
-          name: 'Con adornos',
-          price: 120000,
-        },
-        {
-          name: 'Rasgado',
-          price: 90000,
-        }
-      ],
-      price: 100000,
-      freeShipping: true,
+  // buscar en la base de datos el elemento correspondiente
+  var foundElement = products.find(function (elem) {
+    if(elem.id == req.params.id){
+      return true;
     }
-  }
+  });
   
-  if(req.params.name == 'camiseta'){
-    context = {
-      title: 'Camiseta',
-      img: '/images/camiseta.jpg',
-      description: 'una camiseta',
-      options: [],
-      price: 50000,
-      freeShipping: false,
-    }
-  }
+  // pasar las variables de ese elemento al contexto
+  context = foundElement;
 
   console.log(req.params.name);
 
