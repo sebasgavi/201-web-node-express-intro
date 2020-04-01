@@ -42,6 +42,7 @@ app.get('/tienda', function (req, res) {
   // objeto contexto
   var context = {
     title: 'El título cambiado',
+    products: products,
   }
   // renderizar vista
   res.render('store', context);

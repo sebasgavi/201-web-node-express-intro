@@ -22,4 +22,27 @@ p {
 .product--with-options {
   background: lightcoral;
 }
+
+.productlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thumb {
+  border: 1px solid brown;
+  width: 33%;
+}
+
+.thumb__link {
+  text-decoration: none;
+}
+
+.thumb__title {
+  color: gray;
+}
+
+.thumb__img {
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

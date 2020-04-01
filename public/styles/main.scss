@@ -24,3 +24,24 @@ p {
     background: lightcoral;
   }
 }
+
+.productlist{
+  display: flex;
+}
+
+.thumb{
+  border: 1px solid brown;
+  width: 33%;
+
+  &__link{
+    text-decoration: none;
+  }
+  
+  &__title{
+    color: gray;
+  }
+
+  &__img{
+    width: 100%;
+  }
+}

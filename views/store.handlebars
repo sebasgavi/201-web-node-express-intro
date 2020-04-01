@@ -10,6 +10,15 @@
 
 </nav>
 
-<main>
-  Lista de productos
+<h2>Lista de productos</h2>
+<main class="productlist">
+  {{#each products}}
+  <div class="thumb">
+    <a href="/producto/{{ title }}/{{ id }}" class="thumb__link">
+      <h4 class="thumb__title">{{ title }}</h4>
+      <img class="thumb__img" src="{{ img }}" alt="">
+      <p class="thumb__price">{{ price }}</p>
+    </a>
+  </div>
+  {{/each}}
 </main>
