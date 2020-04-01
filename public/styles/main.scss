@@ -3,6 +3,14 @@ p {
   font-size: 30px;
 }
 
+.mainheader{
+  border: 2px solid red;
+}
+
+.mainfooter{
+  border: 2px solid green;
+}
+
 .product{
   &__header{
     background-color: lightblue;
@@ -10,5 +18,9 @@ p {
 
   &__description{
     font-size: 20px;
+  }
+
+  &--with-options{
+    background: lightcoral;
   }
 }

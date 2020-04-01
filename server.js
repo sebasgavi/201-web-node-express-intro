@@ -53,6 +53,22 @@ app.get('/producto/:name', function (req, res) {
       title: 'Pantalón',
       img: '/images/pantalon.jpg',
       description: 'un pantalón bien chimbita',
+      options: [ 'azul', 'verde', 'blanco' ],
+      variations: [
+        {
+          name: 'Simple',
+        },
+        {
+          name: 'Con adornos',
+          price: 120000,
+        },
+        {
+          name: 'Rasgado',
+          price: 90000,
+        }
+      ],
+      price: 100000,
+      freeShipping: true,
     }
   }
   
@@ -61,6 +77,9 @@ app.get('/producto/:name', function (req, res) {
       title: 'Camiseta',
       img: '/images/camiseta.jpg',
       description: 'una camiseta',
+      options: [],
+      price: 50000,
+      freeShipping: false,
     }
   }
 

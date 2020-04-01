@@ -3,11 +3,23 @@ p {
   font-size: 30px;
 }
 
+.mainheader {
+  border: 2px solid red;
+}
+
+.mainfooter {
+  border: 2px solid green;
+}
+
 .product__header {
   background-color: lightblue;
 }
 
 .product__description {
   font-size: 20px;
+}
+
+.product--with-options {
+  background: lightcoral;
 }
 /*# sourceMappingURL=main.css.map */
